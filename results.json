@@ -1,0 +1,302 @@
+{
+  "source": {
+    "path": "data/bid_qualifications.csv",
+    "sha256": "0daf4d0afacaf7b877dfeb0a10dae1c68eb0e42e450d3b4608207cc0a5825dd4",
+    "raw_rows": 1010,
+    "exact_duplicate_rows": 48,
+    "unique_audits": 962,
+    "labeled_audits": 933,
+    "passed_audits": 855,
+    "failed_audits": 78,
+    "pending_audits": 29,
+    "submission_dates": [
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-05",
+      "2026-09-06",
+      "2026-09-07"
+    ]
+  },
+  "assumptions": {
+    "failure_loss_hours": 90,
+    "manual_warning_cost_hours": 15,
+    "intervention_effectiveness": "unknown; maximum assumes every flagged failure is prevented"
+  },
+  "selection": {
+    "train_dates": [
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-05"
+    ],
+    "holdout_dates": [
+      "2026-09-06",
+      "2026-09-07"
+    ],
+    "candidate_thresholds_minutes": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50
+    ],
+    "criterion": "maximum theoretical net hours on training data; lower threshold wins tie",
+    "training_candidates": {
+      "10": {
+        "labeled": 656,
+        "failures": 56,
+        "flagged": 271,
+        "flagged_failures": 42,
+        "flagged_passes": 229,
+        "flagged_failure_rate": 0.155,
+        "flagged_failure_rate_wilson_95pct": [
+          0.1167,
+          0.2029
+        ],
+        "unflagged": 385,
+        "unflagged_failures": 14,
+        "unflagged_failure_rate": 0.0364,
+        "failure_capture_rate": 0.75,
+        "warning_cost_hours": 4065,
+        "maximum_avoidable_failure_hours": 3780,
+        "maximum_net_hours": -285,
+        "break_even_prevention_share": 1.0754,
+        "minimum_failures_to_prevent_for_positive_net": 46,
+        "pending_flagged": 8
+      },
+      "15": {
+        "labeled": 656,
+        "failures": 56,
+        "flagged": 119,
+        "flagged_failures": 39,
+        "flagged_passes": 80,
+        "flagged_failure_rate": 0.3277,
+        "flagged_failure_rate_wilson_95pct": [
+          0.2499,
+          0.4163
+        ],
+        "unflagged": 537,
+        "unflagged_failures": 17,
+        "unflagged_failure_rate": 0.0317,
+        "failure_capture_rate": 0.6964,
+        "warning_cost_hours": 1785,
+        "maximum_avoidable_failure_hours": 3510,
+        "maximum_net_hours": 1725,
+        "break_even_prevention_share": 0.5085,
+        "minimum_failures_to_prevent_for_positive_net": 20,
+        "pending_flagged": 3
+      },
+      "20": {
+        "labeled": 656,
+        "failures": 56,
+        "flagged": 115,
+        "flagged_failures": 39,
+        "flagged_passes": 76,
+        "flagged_failure_rate": 0.3391,
+        "flagged_failure_rate_wilson_95pct": [
+          0.2591,
+          0.4296
+        ],
+        "unflagged": 541,
+        "unflagged_failures": 17,
+        "unflagged_failure_rate": 0.0314,
+        "failure_capture_rate": 0.6964,
+        "warning_cost_hours": 1725,
+        "maximum_avoidable_failure_hours": 3510,
+        "maximum_net_hours": 1785,
+        "break_even_prevention_share": 0.4915,
+        "minimum_failures_to_prevent_for_positive_net": 20,
+        "pending_flagged": 3
+      },
+      "25": {
+        "labeled": 656,
+        "failures": 56,
+        "flagged": 103,
+        "flagged_failures": 37,
+        "flagged_passes": 66,
+        "flagged_failure_rate": 0.3592,
+        "flagged_failure_rate_wilson_95pct": [
+          0.2732,
+          0.4554
+        ],
+        "unflagged": 553,
+        "unflagged_failures": 19,
+        "unflagged_failure_rate": 0.0344,
+        "failure_capture_rate": 0.6607,
+        "warning_cost_hours": 1545,
+        "maximum_avoidable_failure_hours": 3330,
+        "maximum_net_hours": 1785,
+        "break_even_prevention_share": 0.464,
+        "minimum_failures_to_prevent_for_positive_net": 18,
+        "pending_flagged": 3
+      },
+      "30": {
+        "labeled": 656,
+        "failures": 56,
+        "flagged": 85,
+        "flagged_failures": 28,
+        "flagged_passes": 57,
+        "flagged_failure_rate": 0.3294,
+        "flagged_failure_rate_wilson_95pct": [
+          0.2388,
+          0.4348
+        ],
+        "unflagged": 571,
+        "unflagged_failures": 28,
+        "unflagged_failure_rate": 0.049,
+        "failure_capture_rate": 0.5,
+        "warning_cost_hours": 1275,
+        "maximum_avoidable_failure_hours": 2520,
+        "maximum_net_hours": 1245,
+        "break_even_prevention_share": 0.506,
+        "minimum_failures_to_prevent_for_positive_net": 15,
+        "pending_flagged": 3
+      },
+      "40": {
+        "labeled": 656,
+        "failures": 56,
+        "flagged": 66,
+        "flagged_failures": 21,
+        "flagged_passes": 45,
+        "flagged_failure_rate": 0.3182,
+        "flagged_failure_rate_wilson_95pct": [
+          0.2185,
+          0.4379
+        ],
+        "unflagged": 590,
+        "unflagged_failures": 35,
+        "unflagged_failure_rate": 0.0593,
+        "failure_capture_rate": 0.375,
+        "warning_cost_hours": 990,
+        "maximum_avoidable_failure_hours": 1890,
+        "maximum_net_hours": 900,
+        "break_even_prevention_share": 0.5238,
+        "minimum_failures_to_prevent_for_positive_net": 12,
+        "pending_flagged": 2
+      },
+      "50": {
+        "labeled": 656,
+        "failures": 56,
+        "flagged": 35,
+        "flagged_failures": 12,
+        "flagged_passes": 23,
+        "flagged_failure_rate": 0.3429,
+        "flagged_failure_rate_wilson_95pct": [
+          0.2083,
+          0.5085
+        ],
+        "unflagged": 621,
+        "unflagged_failures": 44,
+        "unflagged_failure_rate": 0.0709,
+        "failure_capture_rate": 0.2143,
+        "warning_cost_hours": 525,
+        "maximum_avoidable_failure_hours": 1080,
+        "maximum_net_hours": 555,
+        "break_even_prevention_share": 0.4861,
+        "minimum_failures_to_prevent_for_positive_net": 6,
+        "pending_flagged": 1
+      }
+    },
+    "selected_sync_age_threshold_minutes": 20
+  },
+  "selected_rule": {
+    "train": {
+      "labeled": 656,
+      "failures": 56,
+      "flagged": 115,
+      "flagged_failures": 39,
+      "flagged_passes": 76,
+      "flagged_failure_rate": 0.3391,
+      "flagged_failure_rate_wilson_95pct": [
+        0.2591,
+        0.4296
+      ],
+      "unflagged": 541,
+      "unflagged_failures": 17,
+      "unflagged_failure_rate": 0.0314,
+      "failure_capture_rate": 0.6964,
+      "warning_cost_hours": 1725,
+      "maximum_avoidable_failure_hours": 3510,
+      "maximum_net_hours": 1785,
+      "break_even_prevention_share": 0.4915,
+      "minimum_failures_to_prevent_for_positive_net": 20,
+      "pending_flagged": 3
+    },
+    "holdout": {
+      "labeled": 277,
+      "failures": 22,
+      "flagged": 52,
+      "flagged_failures": 11,
+      "flagged_passes": 41,
+      "flagged_failure_rate": 0.2115,
+      "flagged_failure_rate_wilson_95pct": [
+        0.1224,
+        0.3403
+      ],
+      "unflagged": 225,
+      "unflagged_failures": 11,
+      "unflagged_failure_rate": 0.0489,
+      "failure_capture_rate": 0.5,
+      "warning_cost_hours": 780,
+      "maximum_avoidable_failure_hours": 990,
+      "maximum_net_hours": 210,
+      "break_even_prevention_share": 0.7879,
+      "minimum_failures_to_prevent_for_positive_net": 9,
+      "pending_flagged": 1
+    },
+    "all_labeled": {
+      "labeled": 933,
+      "failures": 78,
+      "flagged": 167,
+      "flagged_failures": 50,
+      "flagged_passes": 117,
+      "flagged_failure_rate": 0.2994,
+      "flagged_failure_rate_wilson_95pct": [
+        0.2351,
+        0.3727
+      ],
+      "unflagged": 766,
+      "unflagged_failures": 28,
+      "unflagged_failure_rate": 0.0366,
+      "failure_capture_rate": 0.641,
+      "warning_cost_hours": 2505,
+      "maximum_avoidable_failure_hours": 4500,
+      "maximum_net_hours": 1995,
+      "break_even_prevention_share": 0.5567,
+      "minimum_failures_to_prevent_for_positive_net": 28,
+      "pending_flagged": 4
+    }
+  },
+  "validity_only_comparison": {
+    "rule": "valid_days_left <= 3",
+    "train": {
+      "labeled": 77,
+      "failures": 16,
+      "failure_rate": 0.2078,
+      "maximum_net_hours": 285
+    },
+    "holdout": {
+      "labeled": 28,
+      "failures": 3,
+      "failure_rate": 0.1071,
+      "maximum_net_hours": -150
+    },
+    "all_labeled": {
+      "labeled": 105,
+      "failures": 19,
+      "failure_rate": 0.181,
+      "maximum_net_hours": 135
+    },
+    "zero_days_left_all_labeled": {
+      "labeled": 23,
+      "failures": 3,
+      "failure_rate": 0.1304,
+      "maximum_net_hours": -75
+    }
+  }
+}
